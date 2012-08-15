@@ -934,10 +934,6 @@
         <mkdir dir="${rpm.dist.dir}/share/doc/pig/jdiff"/>
         <mkdir dir="${rpm.dist.dir}/share/doc/pig/license" />
 
-        <copy todir="${rpm.dist.dir}/share/pig/lib">
-            <fileset dir="${ivy.lib.dir}" includes="jython*.jar"/>
-        </copy>
-
         <copy file="${output.jarfile.backcompat.withouthadoop}" tofile="${rpm.dist.dir}/share/pig/${final.name}-withouthadoop.jar" />
 
         <copy todir="${rpm.dist.dir}/bin">
@@ -1003,10 +999,6 @@
 
         <copy todir="${tar.dist.dir}/lib" includeEmptyDirs="false">
             <fileset dir="${lib.dir}"/>
-        </copy>
-
-        <copy todir="${tar.dist.dir}/lib">
-            <fileset dir="${ivy.lib.dir}" includes="jython*.jar"/>
         </copy>
 
         <copy file="${output.jarfile.backcompat.withouthadoop}" tofile="${tar.dist.dir}/${final.name}-withouthadoop.jar" />
